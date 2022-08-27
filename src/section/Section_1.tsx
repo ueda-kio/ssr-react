@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import { Button } from '@mui/material';
 import * as Contexts from '../context/context';
 
 const Section_1 = () => {
@@ -6,8 +7,16 @@ const Section_1 = () => {
 
     return (
         <section>
-            <button type='button' onClick={() => dispatch('TRUE')}>true</button>
-            <button type='button' onClick={() => dispatch('FALSE')}>false</button>
+            <p>
+                <Button variant="outlined" onClick={() => dispatch('TRUE')}>
+                    TRUE
+                </Button>
+            </p>
+            <p>
+                <Button variant="outlined" onClick={() => dispatch('FALSE')}>
+                    FALSE
+                </Button>
+            </p>
         </section>
     )
 }
