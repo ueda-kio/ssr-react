@@ -4,7 +4,7 @@ import { userReducer } from './reducer';
 
 const getRandomNum = () => ('00' + Math.floor(Math.random() * 100)).slice(-2);
 
-const UserProvider = ({ children }) => {
+const UserProvider = ({ children }: { children: React.ReactNode }) => {
 	const [user, dispatch] = useReducer(userReducer, false);
 
 	return (
