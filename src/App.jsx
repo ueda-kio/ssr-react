@@ -1,14 +1,14 @@
-import { useCallback, useState } from "react";
+import * as Provider from './context/provider';
+import * as Section from './section';
 
 const App = () => {
-  const [count, setCount] = useState(0);
-  const increment = useCallback(() => setCount((c) => c + 1), []);
+  console.log('App');
   return (
     <>
-    <div>
-      <button onClick={increment}>increment</button>
-      <p>count: {count}</p>
-    </div>
+      <Provider.UserProvider>
+        <Section.Section_1 />
+        <Section.Section_2 />
+      </Provider.UserProvider>
     </>
   );
 }
