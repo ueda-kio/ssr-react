@@ -5,7 +5,11 @@ import { userReducer } from './reducer';
 const getRandomNum = () => ('00' + Math.floor(Math.random() * 100)).slice(-2);
 
 const UserProvider = ({ children }: { children: React.ReactNode }) => {
-	const [user, dispatch] = useReducer(userReducer, false);
+	const [user, dispatch] = useReducer(userReducer, {
+		gender: 'man',
+		age: 10,
+		member: ''
+	});
 
 	return (
 		<UserContext.Provider value={{ user, dispatch }}>

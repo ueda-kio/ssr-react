@@ -6,11 +6,8 @@ const Section_2 = () => {
 
     return (
         <section>
-            {user ? (
-                <p>is true</p>
-            ) : (
-                <p>is false</p>
-            )}
+            <p>gender: {user.gender}</p>
+            <p>member: {user.member}</p>
         </section>
     )
 }
